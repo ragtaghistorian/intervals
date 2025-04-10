@@ -139,6 +139,14 @@ def start_tip(widget):
     #push_label.text = "Push Button: False"
 
 def reset_button_handler(widget):
+    global thetime
+    global intervalInt
+    global workInt
+    global restInt
+    global currentInterval
+    global running
+    global gogogo
+
     thetime = 0
     running = False
     gogogo = True
@@ -149,6 +157,9 @@ def reset_button_handler(widget):
     currentInterval = 1
     workSeconds = 60
     restSeconds = 120
+    intervals_Count.text=str(1)
+    workTime.text="00:00"
+    restTime.text="00:00"
 
 def exit_button_handler(widget):
     pyglet.app.exit()
